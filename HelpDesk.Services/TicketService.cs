@@ -9,6 +9,8 @@ using HelpDesk.Services.Extensions;
 using HelpDesk.Services.Model.Requests;
 using HelpDesk.Services.Model.Results;
 using Microsoft.EntityFrameworkCore;
+using Vives.Services.Model;
+using Vives.Services.Model.Extensions;
 
 namespace HelpDesk.Services
 {
@@ -41,8 +43,19 @@ namespace HelpDesk.Services
             return tickets;
         }
 
-        public async Task<TicketResult> CreateAsync(TicketRequest ticket)
+        public async Task<ServiceResult<TicketResult>> CreateAsync(TicketRequest ticket)
         {
+            if (ticket.Description == "test")
+            {
+                var serviceresult = new ServiceResult<TicketResult>();
+                serviceresult.Messages.Add(new ServiceMessage
+                {
+                    Code = "TesterDetected",
+                    Message = "No need for testing here... :D",
+                    Type = ServiceMessageType.Error
+                });
+                return serviceresult;
+            }
             Ticket newticket = new Ticket
             {
                 ClientNumber = ticket.ClientNumber,
@@ -54,16 +67,19 @@ namespace HelpDesk.Services
             _dbContext.Tickets.Add(newticket);
             await _dbContext.SaveChangesAsync();
             var ticketresult = await GetAsync(newticket.Id);
-            return ticketresult;
+
+            var succesServiceResult = new ServiceResult<TicketResult>(ticketresult);
+            
+            return succesServiceResult;
         }
 
-        public async Task<TicketResult> UpdateAsync(int id, TicketRequest ticket)
+        public async Task<ServiceResult<TicketResult>> UpdateAsync(int id, TicketRequest ticket)
         {
             var dbTicket = await _dbContext.Tickets.SingleOrDefaultAsync(p => p.Id == id);
 
             if (dbTicket is null)
             {
-                return new TicketResult();
+                return new ServiceResult<TicketResult>().NotFound(nameof(ticket));
             }
 
             dbTicket.Description = ticket.Description;
@@ -73,19 +89,28 @@ namespace HelpDesk.Services
             await _dbContext.SaveChangesAsync();
 
             var tckt = await GetAsync(id);
-            return tckt;
+            return new ServiceResult<TicketResult>(tckt);
         }
 
-        public async Task<TicketResult> DeleteAsync(int id)
+        public async Task<ServiceResult> DeleteAsync(int id)
         {
+            var serviceResult = new ServiceResult();
             var ticket = new Ticket() { Id = id };
             _dbContext.Tickets.Attach(ticket);
 
             _dbContext.Tickets.Remove(ticket); 
-            await _dbContext.SaveChangesAsync();
+            var changes = await _dbContext.SaveChangesAsync();
 
+            if (changes == 0)
+            {
+              serviceResult.Messages.Add(new ServiceMessage
+              {
+                  Code = "NothingChanged",
+                  Message = "Something went wrong... the ticket couldnt be removed."
+              }); 
+            }
             TicketResult result = new TicketResult() { Id = id };
-            return result;
+            return serviceResult;
         }
     }
 }

@@ -250,3 +250,5 @@ C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\HelpDesk.
 C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\HelpDesk.Api\obj\Debug\net6.0\HelpDesk.Api.pdb
 C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\HelpDesk.Api\obj\Debug\net6.0\HelpDesk.Api.genruntimeconfig.cache
 C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\HelpDesk.Api\obj\Debug\net6.0\ref\HelpDesk.Api.dll
+C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\HelpDesk.Api\bin\Debug\net6.0\Vives.Services.Model.dll
+C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\HelpDesk.Api\bin\Debug\net6.0\Vives.Services.Model.pdb

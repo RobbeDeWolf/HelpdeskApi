@@ -1,0 +1,12 @@
+C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\Vives.Services.Model\bin\Debug\net6.0\Vives.Services.Model.deps.json
+C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\Vives.Services.Model\bin\Debug\net6.0\Vives.Services.Model.dll
+C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\Vives.Services.Model\bin\Debug\net6.0\Vives.Services.Model.pdb
+C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\Vives.Services.Model\obj\Debug\net6.0\Vives.Services.Model.csproj.AssemblyReference.cache
+C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\Vives.Services.Model\obj\Debug\net6.0\Vives.Services.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\Vives.Services.Model\obj\Debug\net6.0\Vives.Services.Model.AssemblyInfoInputs.cache
+C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\Vives.Services.Model\obj\Debug\net6.0\Vives.Services.Model.AssemblyInfo.cs
+C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\Vives.Services.Model\obj\Debug\net6.0\Vives.Services.Model.csproj.CoreCompileInputs.cache
+C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\Vives.Services.Model\obj\Debug\net6.0\Vives.Services.Model.dll
+C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\Vives.Services.Model\obj\Debug\net6.0\refint\Vives.Services.Model.dll
+C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\Vives.Services.Model\obj\Debug\net6.0\Vives.Services.Model.pdb
+C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\Vives.Services.Model\obj\Debug\net6.0\ref\Vives.Services.Model.dll

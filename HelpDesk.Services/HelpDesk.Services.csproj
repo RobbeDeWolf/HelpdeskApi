@@ -9,6 +9,7 @@
   <ItemGroup>
     <ProjectReference Include="..\HelpDesk.Core\HelpDesk.Core.csproj" />
     <ProjectReference Include="..\HelpDesk.Services.Model\HelpDesk.Services.Model.csproj" />
+    <ProjectReference Include="..\Vives.Services.Model\Vives.Services.Model.csproj" />
   </ItemGroup>
 
 </Project>

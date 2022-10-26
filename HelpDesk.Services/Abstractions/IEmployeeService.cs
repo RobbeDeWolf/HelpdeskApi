@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using HelpDesk.Services.Model.Requests;
 using HelpDesk.Services.Model.Results;
+using Vives.Services.Model;
 
 namespace HelpDesk.Services.Abstractions
 {
@@ -13,9 +14,9 @@ namespace HelpDesk.Services.Abstractions
     {
         Task<EmployeeResult?> GetAsync(int id);
         Task<IList<EmployeeResult>> FindAsync();
-        Task<EmployeeResult> CreateAsync(EmployeeRequest employee);
-        Task<EmployeeResult> UpdateAsync(int id, EmployeeRequest employee );
-        Task<EmployeeResult> DeleteAsync(int id);
+        Task<ServiceResult<EmployeeResult>> CreateAsync(EmployeeRequest employee);
+        Task<ServiceResult<EmployeeResult>> UpdateAsync(int id, EmployeeRequest employee );
+        Task<ServiceResult> DeleteAsync(int id);
 
     }
 }

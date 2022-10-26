@@ -3360,7 +3360,8 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "HelpDesk.Core": "1.0.0",
-          "HelpDesk.Services.Model": "1.0.0"
+          "HelpDesk.Services.Model": "1.0.0",
+          "Vives.Services.Model": "1.0.0"
         },
         "compile": {
           "bin/placeholder/HelpDesk.Services.dll": {}
@@ -3380,6 +3381,16 @@
         },
         "runtime": {
           "bin/placeholder/HelpDesk.Services.Model.dll": {}
+        }
+      },
+      "Vives.Services.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Vives.Services.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Vives.Services.Model.dll": {}
         }
       }
     }
@@ -9586,6 +9597,11 @@
       "type": "project",
       "path": "../HelpDesk.Services.Model/HelpDesk.Services.Model.csproj",
       "msbuildProject": "../HelpDesk.Services.Model/HelpDesk.Services.Model.csproj"
+    },
+    "Vives.Services.Model/1.0.0": {
+      "type": "project",
+      "path": "../Vives.Services.Model/Vives.Services.Model.csproj",
+      "msbuildProject": "../Vives.Services.Model/Vives.Services.Model.csproj"
     }
   },
   "projectFileDependencyGroups": {

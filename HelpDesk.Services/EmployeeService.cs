@@ -10,6 +10,8 @@ using HelpDesk.Services.Extensions;
 using HelpDesk.Services.Model.Requests;
 using HelpDesk.Services.Model.Results;
 using Microsoft.EntityFrameworkCore;
+using Vives.Services.Model;
+using Vives.Services.Model.Extensions;
 
 namespace HelpDesk.Services
 {
@@ -41,7 +43,7 @@ namespace HelpDesk.Services
             return employees;
         }
 
-        public async Task<EmployeeResult> CreateAsync(EmployeeRequest employee)
+        public async Task<ServiceResult<EmployeeResult>> CreateAsync(EmployeeRequest employee)
         {
             var newemployee = new Employee()
             {
@@ -52,16 +54,18 @@ namespace HelpDesk.Services
             _dbContext.Employees.Add(newemployee);
             await _dbContext.SaveChangesAsync();
             var employeeresult = await GetAsync(newemployee.Id);
-            return employeeresult;
+
+            var succesServiceResult = new ServiceResult<EmployeeResult>(employeeresult);
+            return succesServiceResult;
         }
 
-        public async Task<EmployeeResult> UpdateAsync(int id, EmployeeRequest employee)
+        public async Task<ServiceResult<EmployeeResult>> UpdateAsync(int id, EmployeeRequest employee)
         {
            var dbEmployee = await _dbContext.Employees.SingleOrDefaultAsync(p => p.Id == id);
 
            if (dbEmployee is null)
            {
-               return new EmployeeResult();
+               return new ServiceResult<EmployeeResult>().NotFound(nameof(employee));
            }
 
            dbEmployee.FirstName = employee.FirstName;
@@ -70,18 +74,28 @@ namespace HelpDesk.Services
            await _dbContext.SaveChangesAsync();
 
            var Employee = await GetAsync(id);
-           return Employee;
+           return new ServiceResult<EmployeeResult>(Employee);
         }
 
-        public async Task<EmployeeResult> DeleteAsync(int id)
+        public async Task<ServiceResult> DeleteAsync(int id)
         {
+            var serviceResult = new ServiceResult();
             var employee = new Employee() { Id = id };
             _dbContext.Employees.Attach(employee);
-            _dbContext.Employees.Remove(employee);
-            await _dbContext.SaveChangesAsync();
             
+            _dbContext.Employees.Remove(employee);
+            var changes = await _dbContext.SaveChangesAsync();
+            if (changes == 0)
+            {
+                serviceResult.Messages.Add( new ServiceMessage
+                {
+                    Code = "NothingChanged",
+                    Message = "Something happened... nothing changed in the database.",
+                    Type = ServiceMessageType.Warning
+                });
+            }
 
-            return new EmployeeResult(); // needs some work
+            return serviceResult;
         }
     }
 }
