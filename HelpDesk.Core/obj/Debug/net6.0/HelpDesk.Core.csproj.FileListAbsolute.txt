@@ -1,0 +1,12 @@
+C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\HelpDesk.Core\bin\Debug\net6.0\HelpDesk.Core.deps.json
+C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\HelpDesk.Core\bin\Debug\net6.0\HelpDesk.Core.dll
+C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\HelpDesk.Core\bin\Debug\net6.0\HelpDesk.Core.pdb
+C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\HelpDesk.Core\obj\Debug\net6.0\HelpDesk.Core.csproj.AssemblyReference.cache
+C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\HelpDesk.Core\obj\Debug\net6.0\HelpDesk.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\HelpDesk.Core\obj\Debug\net6.0\HelpDesk.Core.AssemblyInfoInputs.cache
+C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\HelpDesk.Core\obj\Debug\net6.0\HelpDesk.Core.AssemblyInfo.cs
+C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\HelpDesk.Core\obj\Debug\net6.0\HelpDesk.Core.csproj.CoreCompileInputs.cache
+C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\HelpDesk.Core\obj\Debug\net6.0\HelpDesk.Core.dll
+C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\HelpDesk.Core\obj\Debug\net6.0\refint\HelpDesk.Core.dll
+C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\HelpDesk.Core\obj\Debug\net6.0\HelpDesk.Core.pdb
+C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\HelpDesk.Core\obj\Debug\net6.0\ref\HelpDesk.Core.dll

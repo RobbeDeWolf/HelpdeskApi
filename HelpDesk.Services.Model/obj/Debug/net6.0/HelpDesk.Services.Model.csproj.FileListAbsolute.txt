@@ -1,0 +1,15 @@
+C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\HelpDesk.Services.Model\bin\Debug\net6.0\HelpDesk.Services.Model.deps.json
+C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\HelpDesk.Services.Model\bin\Debug\net6.0\HelpDesk.Services.Model.dll
+C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\HelpDesk.Services.Model\bin\Debug\net6.0\HelpDesk.Services.Model.pdb
+C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\HelpDesk.Services.Model\bin\Debug\net6.0\HelpDesk.Core.dll
+C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\HelpDesk.Services.Model\bin\Debug\net6.0\HelpDesk.Core.pdb
+C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\HelpDesk.Services.Model\obj\Debug\net6.0\HelpDesk.Services.Model.csproj.AssemblyReference.cache
+C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\HelpDesk.Services.Model\obj\Debug\net6.0\HelpDesk.Services.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\HelpDesk.Services.Model\obj\Debug\net6.0\HelpDesk.Services.Model.AssemblyInfoInputs.cache
+C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\HelpDesk.Services.Model\obj\Debug\net6.0\HelpDesk.Services.Model.AssemblyInfo.cs
+C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\HelpDesk.Services.Model\obj\Debug\net6.0\HelpDesk.Services.Model.csproj.CoreCompileInputs.cache
+C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\HelpDesk.Services.Model\obj\Debug\net6.0\HelpDesk.Services.Model.csproj.CopyComplete
+C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\HelpDesk.Services.Model\obj\Debug\net6.0\HelpDesk.Services.Model.dll
+C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\HelpDesk.Services.Model\obj\Debug\net6.0\refint\HelpDesk.Services.Model.dll
+C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\HelpDesk.Services.Model\obj\Debug\net6.0\HelpDesk.Services.Model.pdb
+C:\Users\Robbe\Documents\Programmeren school bestanden\vakken\HelpDesk\HelpDesk.Services.Model\obj\Debug\net6.0\ref\HelpDesk.Services.Model.dll
