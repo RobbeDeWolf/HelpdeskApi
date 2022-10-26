@@ -17,6 +17,5 @@ namespace HelpDesk.Core
         public string FirstName { get; set; }
         [Required]
         public string LastName { get; set; }
-        public IList <Ticket>Tickets { get; set; } = new List<Ticket>();
     }
 }

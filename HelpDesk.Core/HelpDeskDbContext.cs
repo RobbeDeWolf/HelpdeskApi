@@ -15,15 +15,7 @@ namespace HelpDesk.Core
         }
         public DbSet<Ticket> Tickets { get; set; }
         public DbSet<Employee> Employees { get; set; }
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
-            
-            modelBuilder.Entity<Employee>()
-                .HasMany(c => c.Tickets)
-                .WithOne(e => e.Employee);
-        }
+        
 
         public void Seed()
         {

@@ -18,8 +18,6 @@ namespace HelpDesk.Services.Model.Results
         public string Description { get; set; }
         public TicketStatus Status { get; set; }
         public DateTime Created { get; set; }
-        
-        public int Employeeid { get; set; }
         public Employee? Employee { get; set; }
     }
 }

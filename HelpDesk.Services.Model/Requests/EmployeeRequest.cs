@@ -13,6 +13,5 @@ namespace HelpDesk.Services.Model.Requests
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public IList<TicketResult>? Tickets { get; set; }
     }
 }

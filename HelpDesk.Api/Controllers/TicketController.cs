@@ -50,9 +50,17 @@ namespace HelpDesk.Api.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete([FromRoute] int id)
         {
-            var ticket  = _ticketService.GetAsync(id);
+            var ticket  = await _ticketService.GetAsync(id);
             await _ticketService.DeleteAsync(id);
             return Ok(ticket);
+        }
+
+        [HttpGet("{ticketid}/{employeeid}")]
+
+        public async Task<IActionResult> Assign([FromRoute] int ticketid, [FromRoute] int employeeid)
+        {
+            var assign = await _ticketService.AssignEmployee(ticketid, employeeid);
+            return Ok(assign);
         }
     }
 }

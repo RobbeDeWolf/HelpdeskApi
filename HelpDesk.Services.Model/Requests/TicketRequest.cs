@@ -11,7 +11,6 @@ namespace HelpDesk.Services.Model.Requests
     {
         public string ClientNumber { get; set; }
         public string Description { get; set; }
-        public int? Employeeid { get; set; }
         public TicketStatus Status { get; set; } // on new creation this will be set to 0 bec it will be open all the time. on edit they need to be able to adjust it.
     }
 }

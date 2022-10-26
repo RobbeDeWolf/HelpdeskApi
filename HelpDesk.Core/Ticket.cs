@@ -22,8 +22,6 @@ namespace HelpDesk.Core
         public TicketStatus status { get; set; }
         [Required]
         public DateTime Created { get; set; }
-        
-        public int? Employeeid { get; set; }
         public Employee? Employee { get; set; }= default!;
     }
 }

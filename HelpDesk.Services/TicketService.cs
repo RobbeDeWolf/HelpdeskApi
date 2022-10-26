@@ -61,8 +61,7 @@ namespace HelpDesk.Services
                 ClientNumber = ticket.ClientNumber,
                 Description = ticket.Description,
                 Created = DateTime.UtcNow,
-                status = TicketStatus.Open,
-                Employeeid = null
+                status = TicketStatus.Open
             };
             _dbContext.Tickets.Add(newticket);
             await _dbContext.SaveChangesAsync();
@@ -85,7 +84,6 @@ namespace HelpDesk.Services
             dbTicket.Description = ticket.Description;
             dbTicket.ClientNumber = ticket.ClientNumber;
             dbTicket.status = ticket.Status;
-            dbTicket.Employeeid = ticket.Employeeid;
             await _dbContext.SaveChangesAsync();
 
             var tckt = await GetAsync(id);
@@ -111,6 +109,26 @@ namespace HelpDesk.Services
             }
             TicketResult result = new TicketResult() { Id = id };
             return serviceResult;
+        }
+
+        public async Task<ServiceResult> AssignEmployee(int ticketid, int employeeid)
+        {
+            var serviceresult = new ServiceResult();
+            var employee = _dbContext.Employees.SingleOrDefault(p => p.Id == employeeid);
+            var ticket = _dbContext.Tickets.SingleOrDefault(p => p.Id == ticketid);
+            
+           ticket.Employee = employee;
+           var changes = await _dbContext.SaveChangesAsync();
+           if (changes == 0)
+           {
+               serviceresult.Messages.Add(new ServiceMessage
+               {
+                   Code ="NothingChanged",
+                   Message = "Nothing changed in the database"
+               });
+           }
+
+           return serviceresult;
         }
     }
 }

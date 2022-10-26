@@ -27,8 +27,8 @@ namespace HelpDesk.Services
         public async Task<EmployeeResult> GetAsync(int id)
         {
             var employee = _dbContext.Employees
-                .EmployeeToResult()
                 .AsNoTracking()
+                .EmployeeToResult()
                 .SingleOrDefault(p => p.Id == id);
             return employee;
         }
@@ -36,8 +36,8 @@ namespace HelpDesk.Services
         public async Task<IList<EmployeeResult>> FindAsync()
         {
             var employees = await _dbContext.Employees
-                .EmployeeToResult()
                 .AsNoTracking()
+                .EmployeeToResult()
                 .ToListAsync();
 
             return employees;
