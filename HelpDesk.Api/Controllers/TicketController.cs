@@ -54,9 +54,8 @@ namespace HelpDesk.Api.Controllers
             await _ticketService.DeleteAsync(id);
             return Ok(ticket);
         }
-
+        // assign an existing ticket to an employee
         [HttpGet("{ticketid}/{employeeid}")]
-
         public async Task<IActionResult> Assign([FromRoute] int ticketid, [FromRoute] int employeeid)
         {
             var assign = await _ticketService.AssignEmployee(ticketid, employeeid);

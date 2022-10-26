@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using HelpDesk.Core;
+﻿using HelpDesk.Core;
 using HelpDesk.Services.Abstractions;
 using HelpDesk.Services.Extensions;
 using HelpDesk.Services.Model.Requests;
@@ -107,7 +102,6 @@ namespace HelpDesk.Services
                   Message = "Something went wrong... the ticket couldnt be removed."
               }); 
             }
-            TicketResult result = new TicketResult() { Id = id };
             return serviceResult;
         }
 
@@ -115,7 +109,27 @@ namespace HelpDesk.Services
         {
             var serviceresult = new ServiceResult();
             var employee = _dbContext.Employees.SingleOrDefault(p => p.Id == employeeid);
+            if (employee == null)
+            {
+                serviceresult.Messages.Add(new ServiceMessage
+                {
+                    Code = "EmployeeNotFound",
+                    Message = "Employee unknown",
+                    Type = ServiceMessageType.Error
+                });
+                return serviceresult;
+            }
             var ticket = _dbContext.Tickets.SingleOrDefault(p => p.Id == ticketid);
+            if (ticket == null)
+            {
+                serviceresult.Messages.Add(new ServiceMessage
+                {
+                    Code = "TicketNotFound",
+                    Message = "Ticket unknown",
+                    Type = ServiceMessageType.Error
+                });
+                return serviceresult;
+            }
             
            ticket.Employee = employee;
            var changes = await _dbContext.SaveChangesAsync();
