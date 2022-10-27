@@ -32,7 +32,7 @@ namespace HelpDesk.Api.Controllers
             var createdTicket = await _ticketService.CreateAsync(ticket);
             return Ok(createdTicket);
         }
-        
+
         [HttpGet("{id}")]
         public async Task<IActionResult> Get([FromRoute]int id)
         {
@@ -54,12 +54,20 @@ namespace HelpDesk.Api.Controllers
             await _ticketService.DeleteAsync(id);
             return Ok(ticket);
         }
-        // assign an existing ticket to an employee
+        // assign an existing ticket to an existing employee.
         [HttpGet("{ticketid}/{employeeid}")]
         public async Task<IActionResult> Assign([FromRoute] int ticketid, [FromRoute] int employeeid)
         {
             var assign = await _ticketService.AssignEmployee(ticketid, employeeid);
             return Ok(assign);
+        }
+
+        // Gets all the tickets assigned to the given employee.
+        [HttpGet("Tickets/{employeeid}")]
+        public async Task<IActionResult> TicketsOfEmployee([FromRoute] int employeeid)
+        {
+            var tickets = await _ticketService.GetTicketsOfEmployee(employeeid);
+            return Ok(tickets);
         }
     }
 }

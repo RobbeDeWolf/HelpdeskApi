@@ -144,5 +144,18 @@ namespace HelpDesk.Services
 
            return serviceresult;
         }
+        
+        public async Task<ServiceResult<List<TicketResult>>> GetTicketsOfEmployee(int employeeid)
+        {
+            var employee = _dbContext.Employees.SingleOrDefault(p => p.Id == employeeid);
+            if (employee == null)
+            {
+                return new ServiceResult<List<TicketResult>>().NotFound(nameof(employeeid));
+            }
+
+            var tickets = await _dbContext.Tickets.Where(p => p.Employee.Id == employeeid).TicketToResult().ToListAsync();
+
+            return new ServiceResult<List<TicketResult>>(tickets);
+        }
     }
 }

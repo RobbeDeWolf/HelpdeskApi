@@ -18,5 +18,6 @@ namespace HelpDesk.Services.Abstractions
         Task<ServiceResult<TicketResult>> UpdateAsync(int id, TicketRequest ticket);
         Task<ServiceResult> DeleteAsync(int id);
         Task<ServiceResult> AssignEmployee( int ticketid, int employeeid);
+        Task<ServiceResult<List<TicketResult>>>  GetTicketsOfEmployee(int employeeid);
     }
 }
